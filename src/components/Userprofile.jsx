@@ -40,7 +40,7 @@ const UserProfile = () => {
 
   const fetchUserData = async (email) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/user/${email}`);
+      const response = await fetch(`https://dragoncj-clothing-brand.onrender.com/api/user/${email}`);
       if (response.ok) {
           const data = await response.json();
           setDbUser(data);
@@ -52,7 +52,7 @@ const UserProfile = () => {
 
   const fetchOrders = async (email) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${email}`);
+      const response = await fetch(`https://dragoncj-clothing-brand.onrender.com/api/orders/${email}`);
       if (response.ok) {
           const data = await response.json();
           setOrders(data);
@@ -76,7 +76,7 @@ const UserProfile = () => {
   const handlePasswordReset = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/reset-password', {
+      const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/auth/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: user.email, ...pwdData })

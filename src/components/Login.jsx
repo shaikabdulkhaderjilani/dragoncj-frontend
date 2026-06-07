@@ -27,7 +27,7 @@ const Login = () => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login-otp', {
+      const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/auth/login-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, password: formData.password })
@@ -48,7 +48,7 @@ const Login = () => {
   const handleResendOTP = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login-otp', {
+      const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/auth/login-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, password: formData.password })
@@ -72,7 +72,7 @@ const Login = () => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, otp: formData.otp })

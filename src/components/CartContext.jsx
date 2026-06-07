@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
 
   const fetchUserCart = async (email) => {
       try {
-          const res = await fetch(`http://localhost:5000/api/cart/${email}`);
+          const res = await fetch(`http://dragoncj-clothing-brand.onrender.com/api/cart/${email}`);
           if (res.ok) {
               const dbCart = await res.json();
               setCart(dbCart);
@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('dragonCart', JSON.stringify(newCart));
     
     if (userEmail) {
-        fetch('http://localhost:5000/api/cart/sync', {
+        fetch('/api/cart/sync', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: userEmail, cartItems: newCart })

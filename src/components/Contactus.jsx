@@ -14,21 +14,21 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      // 🔥 ఫ్రంట్ ఎండ్ నుండి బ్యాక్ ఎండ్ కి డేటా పంపుతున్నాం 🔥
-      const response = await fetch('http://localhost:5000/api/contact', {
+      
+      const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
 
       if (response.ok) {
-        setSubmitted(true); // బ్యాక్ ఎండ్ సక్సెస్ అయితేనే గ్రీన్ మెసేజ్ వస్తుంది!
+        setSubmitted(true); 
       } else {
         alert("Transmission Failed. Check Backend.");
       }
     } catch (error) {
       console.error("Error sending message:", error);
-      alert("Server Offline! Backend Run Avuthundo Ledo Chudu.");
+      alert("Server Offline!");
     } finally {
       setLoading(false);
     }

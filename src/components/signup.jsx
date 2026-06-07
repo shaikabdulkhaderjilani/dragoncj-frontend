@@ -46,7 +46,7 @@ const Signup = () => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/signup-otp', {
+      const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/auth/signup-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email })
@@ -67,7 +67,7 @@ const Signup = () => {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/signup', {
+      const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/auth/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

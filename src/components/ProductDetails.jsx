@@ -33,7 +33,7 @@ const ProductDetails = () => {
             console.log("Fetching Product ID:", id); // Debug: Check if ID is correct
 
             // 1. Fetch current product by ID
-            const res = await fetch(`http://localhost:5000/api/products/${id}`);
+            const res = await fetch(`http://dragoncj-clothing-brand.onrender.com/api/products/${id}`);
             
             if (!res.ok) {
                 console.error(`Backend returned status: ${res.status}`);
@@ -75,7 +75,7 @@ const ProductDetails = () => {
 
             // 2. Fetch Related Products
             try {
-                const relatedRes = await fetch(`http://localhost:5000/api/products`);
+                const relatedRes = await fetch(`http://dragoncj-clothing-brand.onrender.com/api/products`);
                 if (relatedRes.ok) {
                     const allProducts = await relatedRes.json();
                     const filteredRelated = allProducts

@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/products'); 
+        const response = await fetch('http://dragoncj-clothing-brand.onrender.com/api/products'); 
         const data = await response.json();
         
         if (response.ok) {
@@ -338,7 +338,7 @@ const Home = () => {
                     <div className="product-card" key={item._id || index}>
                         <div className="product-img-container">
                             <img 
-                              src={item.img && item.img.startsWith('http') ? item.img : `http://localhost:5000${item.img}`} 
+                              src={item.img && item.img.startsWith('http') ? item.img : `${item.img}`} 
                               className="product-img" 
                               alt={item.name}
                             />

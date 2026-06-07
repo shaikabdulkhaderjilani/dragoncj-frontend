@@ -31,7 +31,7 @@ const Shop = () => {
   // --- 1. FETCH DATA FROM BACKEND ---
   useEffect(() => {
     // 🔥 MOBILE FIX: localhost badulu IP address pettam
-    fetch('http://localhost:5000/api/products') 
+    fetch('http://dragoncj-clothing-brand.onrender.com/api/products') 
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);      
